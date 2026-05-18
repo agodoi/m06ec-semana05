@@ -33,7 +33,7 @@ Ele é fundamental na eletrônica moderna e está presente em 99% todos os circu
 
 <img src="https://github.com/agodoi/m05-semana06/blob/main/imgs/transistor.jpeg" width="600">
 
-O que vamos usar são esses possíveis modelos:
+O que vamos usar são esses modelos:
 
 <img src="https://github.com/agodoi/m05-semana06/blob/main/imgs/transistor-bc548.jpg" width="300">
 
