@@ -113,11 +113,11 @@ No amplificador de áudio, os transistores BC548, BC558, TIP31 e TIP32 controlam
 - **1 Resistor de 330Ω** (limita a corrente do LED)
 - **1 Fonte de 12V** (pode ser uma pilha ou um Arduino)
 
-### 🔧 (6.1) Monte o Circuito no Tinkercad
+### 🔧 (6.1) Monte o Circuito no [Tinkercad](https://tinkercad.com/)
 
 <img src="https://github.com/agodoi/m06ec-semana05/blob/main/assets/circuito_transistor_chave_esquematico.png" width="300">
 
-<img src="https://github.com/agodoi/m06ec-semana05/blob/main/assets/circuito%20transistor%20chave.png" width="700">
+
 
 
 ### 🔄 (6.2) Responda este [relatório](https://docs.google.com/document/d/1MhNQvE0AqLZDRvCRriLvltmjjLheclWTTmsVgltsQO0/edit?usp=sharing)
