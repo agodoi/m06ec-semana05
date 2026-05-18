@@ -48,9 +48,31 @@ Os modelos que aparecem no projeto do amplificador são:
 * TIP30 = PNP
 * TIP31 = NPN
 
+**Microcontroladores não são capazes de ativar cargas elétricas, como relés, motores, lâmpadas, bobinas. Usamos o transitor no caminho para atuar como um driver de corrente.**
+
+## (4) Onde buscar Informações?
+
+
+* Sempre nos manuais dos fabricantes.
+* [Datasheet](https://www.alldatasheet.com/)
 
 
 
+
+
+
+
+https://github.com/agodoi/m06ec-semana05/blob/main/assets/circuito_transistor_chave_esquematico.png
+
+
+
+
+
+
+
+
+
+  
 ## (1) Impactos no seu Projeto
 
 ### Imagine quais circuitos você poderia desenvolver usando um transistor para adicionar no seu projeto. Aqui vão alguns exemplos:
@@ -171,23 +193,12 @@ Imagine um botão pressão que ativa um motor.
 - Quando o botão está solto (**Base sem corrente**), o motor está desligado.
 - Quando o botão é pressionado (**Base recebe corrente**), o motor liga.
 
-
-
-### 🏷️ 2. Modo "Amplificador"
-Se aplicarmos uma pequena corrente na **Base**, da ordem de miliampéres, ela **controla** uma corrente muito maior, da ordem de ampéres, do **Coletor para o Emissor**.
-
-💡 **Fórmula básica:**  
-```I_C = β * I_B```
-
 Onde:
 - ( I_C ) = corrente no **Coletor**
 - ( I_B ) = corrente na **Base**
 - ( β ) (ou "ganho") = fator de amplificação do transistor. Todo modelo de transistor tem um β exclusivo. O β indica o quanto sensível ele é para liberar o fluxo de corrente entre C e E a partir de uma excitação de B. Valores típicos: 100 < β < 600. Precisa entrar no datasheet para saber o valore exato do seu transistor.
 
 **Exemplo prático:**  
-- Um microfone capta um som muito fraco (corrente pequena).
-- O transistor amplifica essa corrente e a envia para um alto-falante.
-- O som sai alto e audível!
 
 ## Resumo:
 
