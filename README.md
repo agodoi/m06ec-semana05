@@ -74,7 +74,7 @@ O **NPN** é o que usaremos como exemplo.
 O transistor funciona como uma **chave eletrônica** ou **amplificador de corrente**.
 
 
-### 🏷️ 1. Modo "Chave Liga/Desliga" (Saturação e Corte)
+### (6.1) Modo "Chave Liga/Desliga" (Saturação e Corte)
 - Se **nenhuma corrente** fluir para a **Base (B)** ➝ O transistor fica **desligado** (isto é, **corte**).
 - Se **uma pequena corrente em [mA]** fluir para a **Base (B)** ➝ O transistor liga e permite uma **corrente maior em [A]** entre **Coletor (C) e Emissor (E)** (isto é, **saturação**).
 
@@ -88,27 +88,18 @@ Onde:
 - ( I_B ) = corrente na **Base**
 - ( β ) (ou "ganho") = fator de amplificação do transistor. Todo modelo de transistor tem um β exclusivo. O β indica o quanto sensível ele é para liberar o fluxo de corrente entre C e E a partir de uma excitação de B. Valores típicos: 100 < β < 600. Precisa entrar no datasheet para saber o valore exato do seu transistor.
 
-**Exemplo prático:**  
+**Exemplo prático de hoje:**  
 
 https://github.com/agodoi/m06ec-semana05/blob/main/assets/circuito_transistor_chave_esquematico.png
 
 
-## (7) Onde o Conceito Aparece no Amplificador? [PRÓXIMA AULA]
+### (6.2) Onde o Conceito Aparece no Amplificador? [PRÓXIMA AULA]
 
 No amplificador de áudio, os transistores BC548, BC558, TIP31 e TIP32 controlam o fluxo de corrente em diferentes regiões do circuito.
 
 * Um pequeno sinal aplicado na Base (B) controla uma corrente maior entre Coletor (C) e Emissor (E);
 * Sem corrente suficiente na Base, o transistor permanece em corte;
 * Com corrente suficiente na Base, o transistor entra em saturação.
-
-Esse mesmo princípio é utilizado em:
-
-- acionamento de LEDs;
-- controle de relés;
-- buzzers;
-- motores;
-- módulos eletrônicos;
-- estágios internos do amplificador de áudio.
 
 ## Prática (1)
 
@@ -124,7 +115,9 @@ Esse mesmo princípio é utilizado em:
 
 ### 🔧 Como Montar: siga exatamente o circuito da imagem
 
-<img src="https://github.com/agodoi/m05-semana06/blob/main/imgs/pratica1v5.png" width="1000">
+<img src="https://github.com/agodoi/m06ec-semana05/blob/main/assets/circuito_transistor_chave_esquematico.png" width="500">
+
+<img src="https://github.com/agodoi/m06ec-semana05/blob/main/assets/circuito%20transistor%20chave.png" width="500">
 
 
 ### 🔄 Funcionamento:
