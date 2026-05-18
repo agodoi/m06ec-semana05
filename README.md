@@ -115,7 +115,7 @@ No amplificador de áudio, os transistores BC548, BC558, TIP31 e TIP32 controlam
 
 ### 🔧 Como Montar: siga exatamente o circuito da imagem
 
-<img src="https://github.com/agodoi/m06ec-semana05/blob/main/assets/circuito_transistor_chave_esquematico.png" width="500">
+<img src="https://github.com/agodoi/m06ec-semana05/blob/main/assets/circuito_transistor_chave_esquematico.png" width="300">
 
 <img src="https://github.com/agodoi/m06ec-semana05/blob/main/assets/circuito%20transistor%20chave.png" width="500">
 
