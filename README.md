@@ -15,26 +15,6 @@ Neste momento da disciplina, vamos focar apenas no comportamento do transistor c
 
 O objetivo desta aula não será estudar ganho ou amplificação analógica de áudio, mas sim entender como um pequeno sinal elétrico pode ligar ou desligar cargas maiores.
 
-## (2) Onde o Conceito Aparece no Amplificador?
-
-No amplificador de áudio, os transistores BC548, BC558, TIP31 e TIP32 controlam o fluxo de corrente em diferentes regiões do circuito.
-
-Mesmo que o circuito opere em regime analógico, o conceito fundamental continua sendo:
-
-* Um pequeno sinal aplicado na Base (B) controla uma corrente maior entre Coletor (C) e Emissor (E);
-* Sem corrente suficiente na Base, o transistor permanece em corte;
-* Com corrente suficiente na Base, o transistor entra em saturação.
-
-Esse mesmo princípio é utilizado em:
-
-- acionamento de LEDs;
-- controle de relés;
-- buzzers;
-- motores;
-- módulos eletrônicos;
-- estágios internos do amplificador de áudio.
-
-
 ## (3) O que é um Transistor?
 
 O transistor é um componente eletrônico semicondutor usado para controlar corrente elétrica.
@@ -48,106 +28,6 @@ Os modelos que aparecem no projeto do amplificador são:
 * TIP30 = PNP
 * TIP31 = NPN
 
-**Microcontroladores não são capazes de ativar cargas elétricas, como relés, motores, lâmpadas, bobinas. Usamos o transitor no caminho para atuar como um driver de corrente.**
-
-## (4) Onde buscar Informações?
-
-
-* Sempre nos manuais dos fabricantes.
-* [Datasheet](https://www.alldatasheet.com/)
-
-
-
-
-
-
-
-https://github.com/agodoi/m06ec-semana05/blob/main/assets/circuito_transistor_chave_esquematico.png
-
-
-
-
-
-
-
-
-
-  
-## (1) Impactos no seu Projeto
-
-### Imagine quais circuitos você poderia desenvolver usando um transistor para adicionar no seu projeto. Aqui vão alguns exemplos:
-
-#### 1.1 Circuito de Detecção de Objeto Manipulado
-- **Descrição:** Um sensor de fim de curso ou um interruptor reed pode ser conectado ao braço manipulador do robô. Quando um objeto for coletado, o contato é fechado e um sinal pode ser enviado ao Raspberry Pi Pico.
-- **Uso do BC548:** O transistor pode ser utilizado como um **amplificador de sinal** ou como um **interruptor eletrônico**, garantindo que o sinal do sensor seja adequadamente processado.
-- **Exemplo de circuito:**
-  - Entrada do sensor conectada à base do BC548 com potenciômetro de limitação de modo a liberar 3,3V na entrada do microcontrolador.
-  - Coletor conectado à alimentação e emissor ao GPIO do Raspberry Pi Pico.
-  - Quando o sensor fechar o circuito, o transistor satura e ativa a entrada do microcontrolador, liberando 3,3V.
-
----
-
-#### 1.2 Circuito de Ativação do Leitor de Código de Barras
-- **Descrição:** Para economizar energia, o leitor de código de barras pode ser ativado apenas quando necessário, evitando consumo excessivo.
-- **Uso do BC548:** Funcionando como **chave eletrônica**, o BC548 pode ser acionado por um pulso do GPIO do Raspberry Pi Pico para ligar/desligar o módulo do leitor.
-- **Exemplo de circuito:**
-  - Base do BC548 conectada ao GPIO do Raspberry Pi Pico via resistor.
-  - Coletor conectado ao positivo do leitor de código de barras.
-  - Emissor conectado ao GND.
-  - Quando o GPIO for ativado, o transistor liga o leitor.
-
----
-
-#### 1.3 Indicador Visual de Estado (LED de Status)
-- **Descrição:** LEDs podem ser usados para indicar estados operacionais dos periféricos (exemplo: objeto detectado, leitor ativo, erro, etc.).
-- **Uso do BC548:** Controle de corrente para acionamento de LEDs de alta intensidade sem sobrecarregar as saídas do microcontrolador.
-- **Exemplo de circuito:**
-  - Base do BC548 conectada a um GPIO do Raspberry via resistor (1kΩ).
-  - Coletor conectado ao LED e ao resistor limitador de corrente.
-  - Emissor ao GND.
-  - Quando o GPIO for ativado, o LED acende.
-
----
-
-#### 1.4 Driver de Relé para Acionamento de Componentes Externos
-- **Descrição:** O Raspberry Pi Pico pode não fornecer corrente suficiente para acionar relés diretamente. Um circuito com o BC548 pode permitir o controle de relés para ligar/desligar atuadores mecânicos do robô.
-- **Uso do BC548:** O transistor pode funcionar como **driver de relé**, permitindo que uma corrente mais alta passe pelo relé sem sobrecarregar o microcontrolador.
-- **Exemplo de circuito:**
-  - Base conectada ao GPIO do Raspberry via resistor (1kΩ).
-  - Coletor ligado ao relé e à alimentação.
-  - Emissor ao GND.
-  - Diodo de proteção em paralelo ao relé.
-
----
-
-#### 1.5 Amplificação de Sinal de Sensores de Baixa Potência
-- **Descrição:** Caso algum sensor de proximidade ou fototransistor forneça um sinal muito fraco, o BC548 pode amplificar esse sinal antes de enviá-lo ao Raspberry Pi Pico.
-- **Uso do BC548:** Como amplificador de tensão ou corrente para sensores que operam com variação mínima de sinal.
-
----
-
-#### 1.6 Circuito de Alerta Sonoro (Buzzer)
-- **Descrição:** Caso seja necessário alertar quando um objeto for coletado, um **buzzer piezoelétrico** pode ser acionado pelo Raspberry Pi Pico com a ajuda do BC548.
-- **Uso do BC548:** O transistor pode atuar como chave para permitir a corrente suficiente ao buzzer.
-- **Exemplo de circuito:**
-  - Base do BC548 conectada ao GPIO via resistor (1kΩ).
-  - Coletor conectado ao buzzer e à alimentação.
-  - Emissor ao GND.
-  - Quando o GPIO for ativado, o buzzer emite som.
-
----
-
-#### Resumo
-O **BC548** é um transistor versátil que pode ser usado para:
-- **Controle de sensores** (detecção de objeto, leitor de código de barras).
-- **Ativação de periféricos** (acionamento de relés, buzzers, LEDs).
-- **Amplificação de sinais** (de sensores fracos para entrada do microcontrolador).
-
----
-## (2) Transistor
-
-### (2.1) O que é um transistor?
-
 O **transistor** é um **componente eletrônico semicondutor** usado para amplificar ou chavear sinais elétricos. 
 Ele é fundamental na eletrônica moderna e está presente em 99% todos os circuitos eletrônicos.
 
@@ -160,8 +40,16 @@ O que vamos usar são esses possíveis modelos:
 <img src="https://github.com/agodoi/m05-semana06/blob/main/imgs/transistor-tip41.png" width="300">
 
 
+**Microcontroladores não são capazes de ativar cargas elétricas, como relés, motores, lâmpadas, bobinas. Usamos o transitor no caminho para atuar como um driver de corrente.**
 
-### (2.2) Estrutura Básica
+## (4) Onde buscar Informações?
+
+
+* Sempre nos manuais dos fabricantes.
+* [Datasheet](https://www.alldatasheet.com/)
+
+
+### (5) Estrutura Básica
 
 Um transistor bipolar (como o **BC548** e o **TIP41C**) possui **três terminais**:
 
@@ -179,7 +67,7 @@ O **NPN** é o que usaremos como exemplo.
 - P ➝ Positivo, pino Base (B)
 - N ➝ Negativo, pino Emissor (E)
 
-## 📌 Como o Transistor Funciona?
+## (6) Como o Transistor Funciona?
 
 O transistor funciona como uma **chave eletrônica** ou **amplificador de corrente**.
 
@@ -200,24 +88,37 @@ Onde:
 
 **Exemplo prático:**  
 
-## Resumo:
+https://github.com/agodoi/m06ec-semana05/blob/main/assets/circuito_transistor_chave_esquematico.png
 
-**(a)** Transistor possui 3 pinos: Coletor (C), Base (B) e Emissor (E). 
-**(b)** Existe 2 tipos de transistor: **NPN** e PNP.
-**(c)** Todo transistor possui dois modos de trabalho: **Chave Liga-desliga** e Amplificador
 
----
+## (7) Onde o Conceito Aparece no Amplificador? [PRÓXIMA AULA]
+
+No amplificador de áudio, os transistores BC548, BC558, TIP31 e TIP32 controlam o fluxo de corrente em diferentes regiões do circuito.
+
+* Um pequeno sinal aplicado na Base (B) controla uma corrente maior entre Coletor (C) e Emissor (E);
+* Sem corrente suficiente na Base, o transistor permanece em corte;
+* Com corrente suficiente na Base, o transistor entra em saturação.
+
+Esse mesmo princípio é utilizado em:
+
+- acionamento de LEDs;
+- controle de relés;
+- buzzers;
+- motores;
+- módulos eletrônicos;
+- estágios internos do amplificador de áudio.
 
 ## Prática (1)
 
-### 🎯 Objetivo: acender um LEDcontrolado por um transistor NPN (BC548).
+### 🎯 Objetivo: acender um LED + Relé controlado por um transistor NPN (BC548).
 
 ### 🛠️ Componentes:
 - **1 Transistor BC548**
-- **1 Resistor de 1MΩ** (usar de divisor de tensão com o seu corpo)
+- **1 Resistor de 1kΩ** (usar de divisor de tensão com o seu corpo)
 - **1 LED**
+- **1 Relé**
 - **1 Resistor de 330Ω** (limita a corrente do LED)
-- **1 Fonte de 5V** (pode ser uma pilha ou um Arduino)
+- **1 Fonte de 12V** (pode ser uma pilha ou um Arduino)
 
 ### 🔧 Como Montar: siga exatamente o circuito da imagem
 
@@ -308,6 +209,18 @@ void loop() {
 - No **modo de corte** (Base ≈ 0V), o LED **fica apagado**.
 - No **modo de saturação** (Base > 0.7V), o LED **acende totalmente**.
 - No **modo ativo** (entre 0.2V e 0.7V), o LED **varia o brilho** proporcionalmente.
+
+
+
+
+## Resumo:
+
+**(a)** Transistor possui 3 pinos: Coletor (C), Base (B) e Emissor (E). 
+**(b)** Existe 2 tipos de transistor: **NPN** e PNP.
+**(c)** Todo transistor possui dois modos de trabalho: **Chave Liga-desliga** e Amplificador
+
+---
+
 
 
 ### (2.7) 📌 Conclusão
