@@ -2,7 +2,53 @@
 
 ## Terças e quintas. Professor de horário parcial. Nesses 2 dias, podem contar comigo!
 
-# Semama 06 - Polarização do Transistor
+# Semama 05 - Transistor Como Chave e Conceito Inicial
+
+## (1) Relação com o Projeto do Amplificador de Áudio
+
+Antes de estudarmos o transistor isoladamente, observe que o projeto do amplificador de áudio utiliza 4 transistores para controlar o fluxo de corrente no circuito.
+
+Neste momento da disciplina, vamos focar apenas no comportamento do transistor como chave eletrônica, isto é:
+
+* Transistor em corte → equivalente a uma chave aberta (desligado);
+* Transistor em saturação → equivalente a uma chave fechada (ligado).
+
+O objetivo desta aula não será estudar ganho ou amplificação analógica de áudio, mas sim entender como um pequeno sinal elétrico pode ligar ou desligar cargas maiores.
+
+## (2) Onde o Conceito Aparece no Amplificador?
+
+No amplificador de áudio, os transistores BC548, BC558, TIP31 e TIP32 controlam o fluxo de corrente em diferentes regiões do circuito.
+
+Mesmo que o circuito opere em regime analógico, o conceito fundamental continua sendo:
+
+* Um pequeno sinal aplicado na Base (B) controla uma corrente maior entre Coletor (C) e Emissor (E);
+* Sem corrente suficiente na Base, o transistor permanece em corte;
+* Com corrente suficiente na Base, o transistor entra em saturação.
+
+Esse mesmo princípio é utilizado em:
+
+- acionamento de LEDs;
+- controle de relés;
+- buzzers;
+- motores;
+- módulos eletrônicos;
+- estágios internos do amplificador de áudio.
+
+
+## (3) O que é um Transistor?
+
+O transistor é um componente eletrônico semicondutor usado para controlar corrente elétrica.
+
+Ele está presente em praticamente todos os equipamentos eletrônicos.
+
+Os modelos que aparecem no projeto do amplificador são:
+
+* BC548 = NPN
+* BC558 = PNP
+* TIP30 = PNP
+* TIP31 = NPN
+
+
 
 ## (1) Impactos no seu Projeto
 
