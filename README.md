@@ -15,7 +15,7 @@ Neste momento da disciplina, vamos focar apenas no comportamento do transistor c
 
 O objetivo desta aula não será estudar ganho ou amplificação analógica de áudio, mas sim entender como um pequeno sinal elétrico pode ligar ou desligar cargas maiores.
 
-## (3) O que é um Transistor?
+## (2) O que é um Transistor?
 
 O transistor é um componente eletrônico semicondutor usado para controlar corrente elétrica.
 
@@ -42,14 +42,14 @@ O que vamos usar são esses modelos:
 
 **Microcontroladores não são capazes de ativar cargas elétricas, como relés, motores, lâmpadas, bobinas. Usamos o transitor no caminho para atuar como um driver de corrente.**
 
-## (4) Onde buscar Informações?
+## (3) Onde buscar Informações?
 
 
 * Sempre nos manuais dos fabricantes.
 * [Datasheet](https://www.alldatasheet.com/)
 
 
-### (5) Estrutura Básica
+## (4) Estrutura Básica
 
 Um transistor bipolar (como o **BC548** e o **TIP41C**) possui **três terminais**:
 
@@ -69,12 +69,12 @@ O **NPN** é o que usaremos como exemplo.
 - P ➝ Positivo, pino Base (B)
 - N ➝ Negativo, pino Emissor (E)
 
-## (6) Como o Transistor Funciona?
+## (5) Como o Transistor Funciona?
 
 O transistor funciona como uma **chave eletrônica** ou **amplificador de corrente**.
 
 
-### (6.1) Modo "Chave Liga/Desliga" (Saturação e Corte)
+### (5.1) Modo "Chave Liga/Desliga" (Saturação e Corte)
 - Se **nenhuma corrente** fluir para a **Base (B)** ➝ O transistor fica **desligado** (isto é, **corte**).
 - Se **uma pequena corrente em [mA]** fluir para a **Base (B)** ➝ O transistor liga e permite uma **corrente maior em [A]** entre **Coletor (C) e Emissor (E)** (isto é, **saturação**).
 
@@ -93,7 +93,7 @@ Onde:
 https://github.com/agodoi/m06ec-semana05/blob/main/assets/circuito_transistor_chave_esquematico.png
 
 
-### (6.2) Onde o Conceito Aparece no Amplificador? [PRÓXIMA AULA]
+### (5.2) Onde o Conceito Aparece no Amplificador? [PRÓXIMA AULA]
 
 No amplificador de áudio, os transistores BC548, BC558, TIP31 e TIP32 controlam o fluxo de corrente em diferentes regiões do circuito.
 
@@ -101,7 +101,7 @@ No amplificador de áudio, os transistores BC548, BC558, TIP31 e TIP32 controlam
 * Sem corrente suficiente na Base, o transistor permanece em corte;
 * Com corrente suficiente na Base, o transistor entra em saturação.
 
-## (7) Prática
+## (6) Prática
 
 ### 🎯 Objetivo: acender um LED + Relé controlado por um transistor NPN (BC548).
 
@@ -113,16 +113,16 @@ No amplificador de áudio, os transistores BC548, BC558, TIP31 e TIP32 controlam
 - **1 Resistor de 330Ω** (limita a corrente do LED)
 - **1 Fonte de 12V** (pode ser uma pilha ou um Arduino)
 
-### 🔧 (7.1) Monte o Circuito no Tinkercad
+### 🔧 (6.1) Monte o Circuito no Tinkercad
 
 <img src="https://github.com/agodoi/m06ec-semana05/blob/main/assets/circuito_transistor_chave_esquematico.png" width="300">
 
 <img src="https://github.com/agodoi/m06ec-semana05/blob/main/assets/circuito%20transistor%20chave.png" width="700">
 
 
-### 🔄 (7.2) Responda este [relatório](https://docs.google.com/document/d/1MhNQvE0AqLZDRvCRriLvltmjjLheclWTTmsVgltsQO0/edit?usp=sharing)
+### 🔄 (6.2) Responda este [relatório](https://docs.google.com/document/d/1MhNQvE0AqLZDRvCRriLvltmjjLheclWTTmsVgltsQO0/edit?usp=sharing)
 
-#### 🛠️ (A) Com o push bottom solto, tome nota num bloco de notas:
+#### 🛠️ (6.2.1) Com o push bottom solto, tome nota num bloco de notas:
 
 - A corrente na base I_B.
 - A corrente no coletor I_C.
@@ -133,7 +133,7 @@ No amplificador de áudio, os transistores BC548, BC558, TIP31 e TIP32 controlam
 
 * Lembrando que: **medir corrente, multímetro em série**, **medir tensão, multímetro em paralelo**.
 
-#### 🛠️ (B) Com o push bottom pressionado, tome nota num bloco de notas:
+#### 🛠️ (6.2.3) Com o push bottom pressionado, tome nota num bloco de notas:
 
 - A corrente na base I_B.
 - A corrente no coletor I_C.
@@ -142,7 +142,7 @@ No amplificador de áudio, os transistores BC548, BC558, TIP31 e TIP32 controlam
 - A tensão V_CE.
 - A tensão V_BE.
 
-#### 🔎 (C) Análise do circuito com o push button SOLTO
+#### 🔎 (6.2.4) Análise do circuito com o push button SOLTO
 
 - O LED permaneceu aceso ou apagado? O que isso indica sobre o estado do transistor?
 - A corrente na Base foi alta, baixa ou praticamente nula? O que isso significa?
@@ -152,7 +152,7 @@ No amplificador de áudio, os transistores BC548, BC558, TIP31 e TIP32 controlam
 - A tensão V_BE ficou abaixo ou acima de aproximadamente 0,7V?
 - Podemos afirmar que o transistor se comporta como uma chave aberta nesta condição?
 
-#### 🔎 (D) Análise do circuito com o push button PRESSIONADO
+#### 🔎 (6.2.5) Análise do circuito com o push button PRESSIONADO
 
 - O que aconteceu com o LED quando a Base recebeu corrente?
 - A corrente no Coletor aumentou mesmo com uma corrente pequena na Base?
@@ -165,8 +165,7 @@ No amplificador de áudio, os transistores BC548, BC558, TIP31 e TIP32 controlam
 - O LED acendeu porque a corrente conseguiu circular entre quais terminais do transistor?
 
 
-
-### (8) 📌 Conclusão
+### (7) 📌 Conclusão
 
 Nesta aula prática, conseguimos visualizar como a tensão na **Base** afeta a corrente no **Coletor** do transistor. Isso nos permitiu demonstrar o funcionamento do **transistor BC548** como um **interruptor eletrônico**.
 
