@@ -117,52 +117,7 @@ No amplificador de áudio, os transistores BC548, BC558, TIP31 e TIP32 controlam
 
 <img src="https://github.com/agodoi/m06ec-semana05/blob/main/assets/circuito_transistor_chave_esquematico.png" width="300">
 
-
-
-
 ### 🔄 (6.2) Responda este [relatório](https://docs.google.com/document/d/1MhNQvE0AqLZDRvCRriLvltmjjLheclWTTmsVgltsQO0/edit?usp=sharing)
-
-#### 🛠️ (6.2.1) Com o push bottom solto, tome nota num bloco de notas:
-
-- A corrente na base I_B.
-- A corrente no coletor I_C.
-- A corrente no emissor I_E.
-- A tensão V_BC.
-- A tensão V_CE.
-- A tensão V_BE.
-
-* Lembrando que: **medir corrente, multímetro em série**, **medir tensão, multímetro em paralelo**.
-
-#### 🛠️ (6.2.2) Com o push bottom pressionado, tome nota num bloco de notas:
-
-- A corrente na base I_B.
-- A corrente no coletor I_C.
-- A corrente no emissor I_E.
-- A tensão V_BC.
-- A tensão V_CE.
-- A tensão V_BE.
-
-#### 🔎 (6.2.3) Análise do circuito com o push button SOLTO
-
-- O LED permaneceu aceso ou apagado? O que isso indica sobre o estado do transistor?
-- A corrente na Base foi alta, baixa ou praticamente nula? O que isso significa?
-- Existe corrente significativa circulando entre Coletor e Emissor quando a Base não recebe corrente?
-- Comparando I_B, I_C, e I_E, o que acontece com todas as correntes quando o transistor entra em corte?
-- A tensão V_CE ficou mais próxima de 0V ou de 12V? O que isso revela sobre o transistor?
-- A tensão V_BE ficou abaixo ou acima de aproximadamente 0,7V?
-- Podemos afirmar que o transistor se comporta como uma chave aberta nesta condição?
-
-#### 🔎 (6.2.4) Análise do circuito com o push button PRESSIONADO
-
-- O que aconteceu com o LED quando a Base recebeu corrente?
-- A corrente no Coletor aumentou mesmo com uma corrente pequena na Base?
-- Compare os valores de I_B e I_C. O transistor permitiu controlar uma corrente maior usando uma corrente menor?
-- O valor de V_BE aproximou-se de 0,7V quando o transistor conduziu?
-- A tensão V_CE diminuiu quando o transistor saturou? O que isso indica?
-- O transistor passou a se comportar mais como:
-  - uma chave aberta
-  - ou uma chave fechada?
-- O LED acendeu porque a corrente conseguiu circular entre quais terminais do transistor?
 
 
 ### (7) 📌 Conclusão
