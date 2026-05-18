@@ -133,7 +133,7 @@ No amplificador de áudio, os transistores BC548, BC558, TIP31 e TIP32 controlam
 
 * Lembrando que: **medir corrente, multímetro em série**, **medir tensão, multímetro em paralelo**.
 
-#### 🛠️ (6.2.3) Com o push bottom pressionado, tome nota num bloco de notas:
+#### 🛠️ (6.2.2) Com o push bottom pressionado, tome nota num bloco de notas:
 
 - A corrente na base I_B.
 - A corrente no coletor I_C.
@@ -142,7 +142,7 @@ No amplificador de áudio, os transistores BC548, BC558, TIP31 e TIP32 controlam
 - A tensão V_CE.
 - A tensão V_BE.
 
-#### 🔎 (6.2.4) Análise do circuito com o push button SOLTO
+#### 🔎 (6.2.3) Análise do circuito com o push button SOLTO
 
 - O LED permaneceu aceso ou apagado? O que isso indica sobre o estado do transistor?
 - A corrente na Base foi alta, baixa ou praticamente nula? O que isso significa?
@@ -152,7 +152,7 @@ No amplificador de áudio, os transistores BC548, BC558, TIP31 e TIP32 controlam
 - A tensão V_BE ficou abaixo ou acima de aproximadamente 0,7V?
 - Podemos afirmar que o transistor se comporta como uma chave aberta nesta condição?
 
-#### 🔎 (6.2.5) Análise do circuito com o push button PRESSIONADO
+#### 🔎 (6.2.4) Análise do circuito com o push button PRESSIONADO
 
 - O que aconteceu com o LED quando a Base recebeu corrente?
 - A corrente no Coletor aumentou mesmo com uma corrente pequena na Base?
