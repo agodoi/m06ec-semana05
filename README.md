@@ -160,8 +160,8 @@ No amplificador de áudio, os transistores BC548, BC558, TIP31 e TIP32 controlam
 - O valor de V_BE aproximou-se de 0,7V quando o transistor conduziu?
 - A tensão V_CE diminuiu quando o transistor saturou? O que isso indica?
 - O transistor passou a se comportar mais como:
--     uma chave aberta
--     ou uma chave fechada?
+  - uma chave aberta
+  - ou uma chave fechada?
 - O LED acendeu porque a corrente conseguiu circular entre quais terminais do transistor?
 
 
