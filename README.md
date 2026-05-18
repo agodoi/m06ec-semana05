@@ -101,7 +101,7 @@ No amplificador de áudio, os transistores BC548, BC558, TIP31 e TIP32 controlam
 * Sem corrente suficiente na Base, o transistor permanece em corte;
 * Com corrente suficiente na Base, o transistor entra em saturação.
 
-## Prática (1)
+## (7) Prática
 
 ### 🎯 Objetivo: acender um LED + Relé controlado por um transistor NPN (BC548).
 
@@ -113,121 +113,62 @@ No amplificador de áudio, os transistores BC548, BC558, TIP31 e TIP32 controlam
 - **1 Resistor de 330Ω** (limita a corrente do LED)
 - **1 Fonte de 12V** (pode ser uma pilha ou um Arduino)
 
-### 🔧 Como Montar: siga exatamente o circuito da imagem
+### 🔧 (7.1) Monte o Circuito no Tinkercad
 
 <img src="https://github.com/agodoi/m06ec-semana05/blob/main/assets/circuito_transistor_chave_esquematico.png" width="300">
 
-<img src="https://github.com/agodoi/m06ec-semana05/blob/main/assets/circuito%20transistor%20chave.png" width="500">
+<img src="https://github.com/agodoi/m06ec-semana05/blob/main/assets/circuito%20transistor%20chave.png" width="700">
 
 
-### 🔄 Funcionamento:
-- Quando você tocar no nó que une pino (B) e R de 1MΩ e o **fio azul**, o seu corpo liberará uma pequena corrente na entrada da **Base**.
-- O transistor **liga** e permite uma corrente maior fluir do **Coletor para o Emissor**.
-- O **LED acende!**
-- Quando você remove o seu dedo, desativa o sinal (0V), a corrente para e o LED **apaga**.
-- **Caso o LED não acenda** com o seu toque, segure com a outra mão, **o POSITIVO do Arduino**.
+### 🔄 (7.2) Responda este [relatório](https://docs.google.com/document/d/1MhNQvE0AqLZDRvCRriLvltmjjLheclWTTmsVgltsQO0/edit?usp=sharing)
 
-## 📌 Resumo Final
-✅ O transistor **controla** o fluxo de corrente.  
-✅ Funciona como uma **chave eletrônica** ou **amplificador**.  
-✅ Pequenas correntes na **Base** podem ativar **grandes correntes no Coletor**.  
-✅ É essencial para **sensores, motores, amplificadores, LEDs e circuitos digitais**.
+#### 🛠️ (A) Com o push bottom solto, tome nota num bloco de notas:
 
----
+- A corrente na base I_B.
+- A corrente no coletor I_C.
+- A corrente no emissor I_E.
+- A tensão V_BC.
+- A tensão V_CE.
+- A tensão V_BE.
 
-## Prática (2)
+* Lembrando que: **medir corrente, multímetro em série**, **medir tensão, multímetro em paralelo**.
 
-### (2.1) 🎯 Objetivo: usar o Monitor Plotter do Arduino IDE e observar o comportamento do BC548 como liga/desliga.
+#### 🛠️ (B) Com o push bottom pressionado, tome nota num bloco de notas:
 
-### (2.2) 🛠️ Materiais Necessários:
-- 1 **Arduino Uno**
-- 1 **Transistor BC548**
-- 1 **Resistor de 1MΩ** (para a base do transistor)
-- 1 **Resistor de 330Ω** (para limitar corrente do LED)
-- 1 **LED**
-- 1 **Potenciômetro de 1MΩ** (para controlar a corrente na Base)
-- **Fios jumper**
-- **Protoboard**
+- A corrente na base I_B.
+- A corrente no coletor I_C.
+- A corrente no emissor I_E.
+- A tensão V_BC.
+- A tensão V_CE.
+- A tensão V_BE.
 
-### (2.3) 🔧 Como Montar: siga exatamente o circuito da imagem
+#### 🔎 (C) Análise do circuito com o push button SOLTO
 
-As medições você fará após a montagem. Por enquanto, concentre-se apenas nos componentes.
+- O LED permaneceu aceso ou apagado? O que isso indica sobre o estado do transistor?
+- A corrente na Base foi alta, baixa ou praticamente nula? O que isso significa?
+- Existe corrente significativa circulando entre Coletor e Emissor quando a Base não recebe corrente?
+- Comparando I_B, I_C, e I_E, o que acontece com todas as correntes quando o transistor entra em corte?
+- A tensão V_CE ficou mais próxima de 0V ou de 12V? O que isso revela sobre o transistor?
+- A tensão V_BE ficou abaixo ou acima de aproximadamente 0,7V?
+- Podemos afirmar que o transistor se comporta como uma chave aberta nesta condição?
 
-<img src="https://github.com/agodoi/m05-semana06/blob/main/imgs/pratica2v5.png" width="1000"> 
+#### 🔎 (D) Análise do circuito com o push button PRESSIONADO
 
-### (2.4) 🎛️ Como Funciona?
-1. **O Potenciômetro** ajusta a corrente que entra na **Base do transistor**.
-2. O **Arduino lê a tensão da Base** (pino A0).
-3. O transistor controla a corrente no **Coletor → Emissor**, acendendo ou apagando o LED.
-4. O **Monitor Plotter** exibe a relação entre a tensão na **Base** e no **Coletor**.
-5. Conforme giramos o **potenciômetro**, podemos visualizar a **zona de corte**, **saturação** e o **modo linear** do transistor.
-
-### (2.5) 💻 Código para o Arduino: copie e cole esse código no seu Arduino IDE e grave no Arduino Uno
-
-```
-#define BASE_PIN A0  // Pino do potenciômetro (Base do transistor)
-#define COLETOR_PIN A1 // Pino conectado ao Coletor
-#define LED_PIN 2  // Pino PWM para o LED (pode simular a corrente no coletor)
-
-void setup() {
-    Serial.begin(9600);
-    pinMode(LED_PIN, OUTPUT);
-}
-
-void loop() {
-    int baseVoltage = analogRead(BASE_PIN);  // Lê a tensão na Base
-    int coletorVoltage = analogRead(COLETOR_PIN);  // Lê a tensão no Coletor
-
-    // Converte para volts (Arduino opera de 0 a 5V com resolução de 1024 bits)
-    float vBase = baseVoltage * (5.0 / 1023.0);
-    float vColetor = coletorVoltage * (5.0 / 1023.0);
-
-    // Controla o brilho do LED com a leitura da Base (simulando corrente no Coletor)
-    analogWrite(LED_PIN, map(baseVoltage, 0, 1023, 0, 255));
-
-    // Envia valores para o Monitor Plotter do Arduino
-    Serial.print("Base: ");
-    Serial.print(vBase);
-    Serial.print("V  ");
-
-    Serial.print("Coletor: ");
-    Serial.print(vColetor);
-    Serial.println("V");
-
-    delay(100);
-}
-```
-
-### (2.6) 📊 O que esperar no Monitor Plotter?
-- Quando giramos o **potenciômetro**, vemos a tensão na **Base** aumentando ou diminuindo.
-- A tensão no **Coletor** muda conforme a Base é polarizada.
-- No **modo de corte** (Base ≈ 0V), o LED **fica apagado**.
-- No **modo de saturação** (Base > 0.7V), o LED **acende totalmente**.
-- No **modo ativo** (entre 0.2V e 0.7V), o LED **varia o brilho** proporcionalmente.
+- O que aconteceu com o LED quando a Base recebeu corrente?
+- A corrente no Coletor aumentou mesmo com uma corrente pequena na Base?
+- Compare os valores de I_B e I_C. O transistor permitiu controlar uma corrente maior usando uma corrente menor?
+- O valor de V_BE aproximou-se de 0,7V quando o transistor conduziu?
+- A tensão V_CE diminuiu quando o transistor saturou? O que isso indica?
+- O transistor passou a se comportar mais como:
+-     uma chave aberta
+-     ou uma chave fechada?
+- O LED acendeu porque a corrente conseguiu circular entre quais terminais do transistor?
 
 
 
+### (8) 📌 Conclusão
 
-## Resumo:
+Nesta aula prática, conseguimos visualizar como a tensão na **Base** afeta a corrente no **Coletor** do transistor. Isso nos permitiu demonstrar o funcionamento do **transistor BC548** como um **interruptor eletrônico**.
 
-**(a)** Transistor possui 3 pinos: Coletor (C), Base (B) e Emissor (E). 
-**(b)** Existe 2 tipos de transistor: **NPN** e PNP.
-**(c)** Todo transistor possui dois modos de trabalho: **Chave Liga-desliga** e Amplificador
-
----
-
-
-
-### (2.7) 📌 Conclusão
-
-Nesta aula prática, conseguimos visualizar no **Monitor Plotter** do Arduino como a tensão na **Base** afeta a corrente no **Coletor** do transistor. Isso nos permitiu demonstrar o funcionamento do **transistor BC548** como um **interruptor eletrônico** ou um **amplificador de sinal**.
-
-✅ **Demonstração clara dos estados de operação do transistor!**  
-✅ **Interatividade com controle de um LED!**  
-✅ **Monitor Plotter ajuda a visualizar a relação entre Base e Coletor!**  
-
----
-
-## (3) Ponderada - Relatório
-
-Faça o download desse [RELATÓRIO AQUI](https://docs.google.com/document/d/1g1GO6JVUERXNDGacWIwJQ2FXL0V0NEEO7IFBBUc65ZY/edit?usp=sharing), faça o seu preenchimento. Quando tiver finalizado, trave-o em PDF, salve no seu Drive e compartilhe o link publicamente na Adalove até essa sexta-feira, dia 14/março às 23h59.
+✅ **Demonstração clara de 2 estados de operação do transistor!**  
+✅ **Interatividade com controle de um LED e relé!**  
