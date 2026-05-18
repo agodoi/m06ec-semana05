@@ -61,7 +61,7 @@ Um transistor bipolar (como o **BC548** e o **TIP41C**) possui **três terminais
 - **NPN** (mais comum).
 - **PNP**
 
-<img src="https://github.com/agodoi/m06ec-semana05/blob/main/assets/pnp_npn.png" width="600">
+<img src="https://github.com/agodoi/m06ec-semana05/blob/main/assets/pnp_npn.png" width="400">
 
 O **NPN** é o que usaremos como exemplo.
 
