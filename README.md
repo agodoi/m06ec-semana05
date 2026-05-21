@@ -90,7 +90,7 @@ Onde:
 
 **Exemplo prático de hoje:**  
 
-https://github.com/agodoi/m06ec-semana05/blob/main/assets/circuito_transistor_chave_esquematico.png
+https://github.com/agodoi/m06ec-semana05/blob/main/assets/circuito_transistor_chave_esquematicov2.png
 
 
 ### (5.2) Onde o Conceito Aparece no Amplificador? [PRÓXIMA AULA]
