@@ -115,7 +115,7 @@ No amplificador de áudio, os transistores BC548, BC558, TIP31 e TIP32 controlam
 
 ### 🔧 (6.1) Monte o Circuito no [Tinkercad](https://tinkercad.com/)
 
-<img src="https://github.com/agodoi/m06ec-semana05/blob/main/assets/circuito_transistor_chave_esquematico.png" width="300">
+<img src="https://github.com/agodoi/m06ec-semana05/blob/main/assets/circuito_transistor_chave_esquematicov3.png" width="300">
 
 ### 🔄 (6.2) Responda este [relatório](https://docs.google.com/document/d/1MhNQvE0AqLZDRvCRriLvltmjjLheclWTTmsVgltsQO0/edit?usp=sharing) [a sua interação com o professor vale participação]
 
