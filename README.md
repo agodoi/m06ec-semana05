@@ -88,7 +88,7 @@ Onde:
 - ( I_B ) = corrente na **Base**
 - ( β ) (ou "ganho") = fator de amplificação do transistor. Todo modelo de transistor tem um β exclusivo. O β indica o quanto sensível ele é para liberar o fluxo de corrente entre C e E a partir de uma excitação de B. Valores típicos: 100 < β < 600. Precisa entrar no datasheet para saber o valore exato do seu transistor.
 
-**Exemplo prático de hoje:**  
+**Exemplo prático de hoje:**  Acionamnento de relé e LED via chaveamento de transistor
 
 <img src="https://github.com/agodoi/m06ec-semana05/blob/main/assets/circuito_transistor_chave_esquematicov3.png" width="300">
 
